@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "5dcde578-b025-4c4c-b8e8-df653dffbd40",
+		"name": "Build - Travel Final Draft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Reset Demo - Remove Synonym Map",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"value": "{{AdminAPIKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@odata.context\": \"https://azs-demos.search.windows.net/$metadata#indexes/$entity\",\n    \"@odata.etag\": \"\\\"0x8D6D280E2A919B8\\\"\",\n    \"name\": \"travel-stackexchange\",\n    \"defaultScoringProfile\": \"\",\n    \"fields\": [\n        {\n            \"name\": \"id\",\n            \"type\": \"Edm.String\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": true,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"CreationDate\",\n            \"type\": \"Edm.DateTimeOffset\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Score\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"ViewCount\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"BodyHTML\",\n            \"type\": \"Edm.String\",\n            \"searchable\": true,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Body\",\n            \"type\": \"Edm.String\",\n            \"searchable\": true,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"OwnerUserId\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"LastEditorUserId\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"LastEditDate\",\n            \"type\": \"Edm.DateTimeOffset\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"LastActivityDate\",\n            \"type\": \"Edm.DateTimeOffset\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Title\",\n            \"type\": \"Edm.String\",\n            \"searchable\": true,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Tags\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"AnswerCount\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"CommentCount\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"CloseDate\",\n            \"type\": \"Edm.DateTimeOffset\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Comments\",\n            \"type\": \"Collection(Edm.ComplexType)\",\n            \"fields\": [\n                {\n                    \"name\": \"Score\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"Text\",\n                    \"type\": \"Edm.String\",\n                    \"searchable\": true,\n                    \"filterable\": false,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": false,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": \"en.microsoft\",\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"CreationDate\",\n                    \"type\": \"Edm.DateTimeOffset\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"UserId\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                }\n            ]\n        },\n        {\n            \"name\": \"Votes\",\n            \"type\": \"Edm.ComplexType\",\n            \"fields\": [\n                {\n                    \"name\": \"UpVotes\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"DownVotes\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                }\n            ]\n        },\n        {\n            \"name\": \"Answers\",\n            \"type\": \"Collection(Edm.ComplexType)\",\n            \"fields\": [\n                {\n                    \"name\": \"IsAcceptedAnswer\",\n                    \"type\": \"Edm.String\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"Body\",\n                    \"type\": \"Edm.String\",\n                    \"searchable\": true,\n                    \"filterable\": false,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": false,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": \"en.microsoft\",\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"Score\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"CreationDate\",\n                    \"type\": \"Edm.DateTimeOffset\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"OwnerUserId\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                }\n            ]\n        },\n        {\n            \"name\": \"rid\",\n            \"type\": \"Edm.String\",\n            \"searchable\": false,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"organizations\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"locations\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"keyphrases\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"language\",\n            \"type\": \"Edm.String\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        }\n    ],\n    \"scoringProfiles\": [],\n    \"corsOptions\": {\n        \"allowedOrigins\": [\n            \"*\"\n        ],\n        \"maxAgeInSeconds\": 300\n    },\n    \"suggesters\": [\n        {\n            \"name\": \"sg\",\n            \"searchMode\": \"analyzingInfixMatching\",\n            \"sourceFields\": [\n                \"rid\",\n                \"organizations\",\n                \"locations\",\n                \"keyphrases\",\n                \"language\"\n            ]\n        }\n    ],\n    \"analyzers\": [],\n    \"tokenizers\": [],\n    \"tokenFilters\": [],\n    \"charFilters\": []\n}"
+				},
+				"url": {
+					"raw": "https://{{SearchService}}.search.windows.net/indexes/{{IndexName}}?api-version=2019-05-06",
+					"protocol": "https",
+					"host": [
+						"{{SearchService}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2019-05-06"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Seattle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"value": "{{APIKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{SearchService}}.search.windows.net/indexes/{{IndexName}}/docs?api-version=2019-05-06&search=seattle",
+					"protocol": "https",
+					"host": [
+						"{{SearchService}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2019-05-06"
+						},
+						{
+							"key": "search",
+							"value": "seattle"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Highlight Complex Type",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"value": "{{APIKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{SearchService}}.search.windows.net/indexes/{{IndexName}}/docs?api-version=2019-05-06&search=seattle&highlight=Comments/Text",
+					"protocol": "https",
+					"host": [
+						"{{SearchService}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2019-05-06"
+						},
+						{
+							"key": "search",
+							"value": "seattle"
+						},
+						{
+							"key": "highlight",
+							"value": "Comments/Text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Facet locations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"value": "{{APIKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{SearchService}}.search.windows.net/indexes/{{IndexName}}/docs?api-version=2019-05-06&search=seattle&facet=locations",
+					"protocol": "https",
+					"host": [
+						"{{SearchService}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2019-05-06"
+						},
+						{
+							"key": "search",
+							"value": "seattle"
+						},
+						{
+							"key": "facet",
+							"value": "locations"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Facet Complex Type",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"value": "{{APIKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{SearchService}}.search.windows.net/indexes/{{IndexName}}/docs?api-version=2019-05-06&search=seattle&facet=Votes/UpVotes",
+					"protocol": "https",
+					"host": [
+						"{{SearchService}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2019-05-06"
+						},
+						{
+							"key": "search",
+							"value": "seattle"
+						},
+						{
+							"key": "facet",
+							"value": "Votes/UpVotes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Complex Type",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"value": "{{APIKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{SearchService}}.search.windows.net/indexes/{{IndexName}}/docs?api-version=2019-05-06&search=seattle&facet=Votes/UpVotes&$filter=Votes/UpVotes gt  25",
+					"protocol": "https",
+					"host": [
+						"{{SearchService}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}",
+						"docs"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2019-05-06"
+						},
+						{
+							"key": "search",
+							"value": "seattle"
+						},
+						{
+							"key": "facet",
+							"value": "Votes/UpVotes"
+						},
+						{
+							"key": "$filter",
+							"value": "Votes/UpVotes gt  25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Scoring",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"value": "{{AdminAPIKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"travel-stackexchange\",\n    \"defaultScoringProfile\": \"boostPopularAndNew\",\n    \"fields\": [\n        {\n            \"name\": \"id\",\n            \"type\": \"Edm.String\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": true,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"CreationDate\",\n            \"type\": \"Edm.DateTimeOffset\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Score\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"ViewCount\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"BodyHTML\",\n            \"type\": \"Edm.String\",\n            \"searchable\": true,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Body\",\n            \"type\": \"Edm.String\",\n            \"searchable\": true,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": [\n                \"travel-stackexchange-synonyms\"\n            ]\n        },\n        {\n            \"name\": \"OwnerUserId\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"LastEditorUserId\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"LastEditDate\",\n            \"type\": \"Edm.DateTimeOffset\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"LastActivityDate\",\n            \"type\": \"Edm.DateTimeOffset\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Title\",\n            \"type\": \"Edm.String\",\n            \"searchable\": true,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Tags\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"AnswerCount\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"CommentCount\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"CloseDate\",\n            \"type\": \"Edm.DateTimeOffset\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Comments\",\n            \"type\": \"Collection(Edm.ComplexType)\",\n            \"fields\": [\n                {\n                    \"name\": \"Score\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"Text\",\n                    \"type\": \"Edm.String\",\n                    \"searchable\": true,\n                    \"filterable\": false,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": false,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": \"en.microsoft\",\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"CreationDate\",\n                    \"type\": \"Edm.DateTimeOffset\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"UserId\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                }\n            ]\n        },\n        {\n            \"name\": \"Votes\",\n            \"type\": \"Edm.ComplexType\",\n            \"fields\": [\n                {\n                    \"name\": \"UpVotes\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"DownVotes\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                }\n            ]\n        },\n        {\n            \"name\": \"Answers\",\n            \"type\": \"Collection(Edm.ComplexType)\",\n            \"fields\": [\n                {\n                    \"name\": \"IsAcceptedAnswer\",\n                    \"type\": \"Edm.String\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"Body\",\n                    \"type\": \"Edm.String\",\n                    \"searchable\": true,\n                    \"filterable\": false,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": false,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": \"en.microsoft\",\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"Score\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"CreationDate\",\n                    \"type\": \"Edm.DateTimeOffset\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"OwnerUserId\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                }\n            ]\n        },\n        {\n            \"name\": \"rid\",\n            \"type\": \"Edm.String\",\n            \"searchable\": false,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"organizations\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"locations\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"keyphrases\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"language\",\n            \"type\": \"Edm.String\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        }\n    ],\n    \"scoringProfiles\": [\n        {\n            \"name\": \"boostPopularAndNew\",\n            \"functionAggregation\": \"sum\",\n            \"text\": null,\n            \"functions\": [\n                {\n                    \"fieldName\": \"Votes/UpVotes\",\n                    \"interpolation\": \"linear\",\n                    \"type\": \"magnitude\",\n                    \"boost\": 5,\n                    \"freshness\": null,\n                    \"magnitude\": {\n                        \"boostingRangeStart\": 0,\n                        \"boostingRangeEnd\": 20,\n                        \"constantBoostBeyondRange\": true\n                    },\n                    \"distance\": null,\n                    \"tag\": null\n                },\n                {\n                    \"fieldName\": \"LastActivityDate\",\n                    \"interpolation\": \"constant\",\n                    \"type\": \"freshness\",\n                    \"boost\": 5,\n                    \"freshness\": {\n                        \"boostingDuration\": \"P120D\"\n                    },\n                    \"magnitude\": null,\n                    \"distance\": null,\n                    \"tag\": null\n                }\n            ]\n        }\n    ],\n    \"corsOptions\": {\n        \"allowedOrigins\": [\n            \"*\"\n        ],\n        \"maxAgeInSeconds\": 300\n    },\n    \"suggesters\": [\n        {\n            \"name\": \"sg\",\n            \"searchMode\": \"analyzingInfixMatching\",\n            \"sourceFields\": [\n                \"rid\",\n                \"organizations\",\n                \"locations\",\n                \"keyphrases\",\n                \"language\"\n            ]\n        }\n    ],\n    \"analyzers\": [],\n    \"tokenizers\": [],\n    \"tokenFilters\": [],\n    \"charFilters\": []\n}"
+				},
+				"url": {
+					"raw": "https://{{SearchService}}.search.windows.net/indexes/{{IndexName}}?api-version=2019-05-06",
+					"protocol": "https",
+					"host": [
+						"{{SearchService}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2019-05-06"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autocomplete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"value": "{{APIKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"fuzzy\": true,\r\n   \"search\": \"hea\", \r\n   \"suggesterName\": \"sg\", \r\n   \"autocompleteMode\": \"twoTerms\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://{{SearchService}}.search.windows.net/indexes/{{IndexName}}/docs/autocomplete?api-version=2015-02-28-Preview",
+					"protocol": "https",
+					"host": [
+						"{{SearchService}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}",
+						"docs",
+						"autocomplete"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2015-02-28-Preview"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply Synonym Map",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"value": "{{AdminAPIKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"travel-stackexchange\",\n    \"defaultScoringProfile\": \"boostPopularAndNew\",\n    \"fields\": [\n        {\n            \"name\": \"id\",\n            \"type\": \"Edm.String\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": true,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"CreationDate\",\n            \"type\": \"Edm.DateTimeOffset\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Score\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"ViewCount\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"BodyHTML\",\n            \"type\": \"Edm.String\",\n            \"searchable\": true,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Body\",\n            \"type\": \"Edm.String\",\n            \"searchable\": true,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": [\n                \"travel-stackexchange-synonyms\"\n            ]\n        },\n        {\n            \"name\": \"OwnerUserId\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"LastEditorUserId\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"LastEditDate\",\n            \"type\": \"Edm.DateTimeOffset\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"LastActivityDate\",\n            \"type\": \"Edm.DateTimeOffset\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Title\",\n            \"type\": \"Edm.String\",\n            \"searchable\": true,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Tags\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"AnswerCount\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"CommentCount\",\n            \"type\": \"Edm.Int64\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"CloseDate\",\n            \"type\": \"Edm.DateTimeOffset\",\n            \"searchable\": false,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"Comments\",\n            \"type\": \"Collection(Edm.ComplexType)\",\n            \"fields\": [\n                {\n                    \"name\": \"Score\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"Text\",\n                    \"type\": \"Edm.String\",\n                    \"searchable\": true,\n                    \"filterable\": false,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": false,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": \"en.microsoft\",\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"CreationDate\",\n                    \"type\": \"Edm.DateTimeOffset\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"UserId\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                }\n            ]\n        },\n        {\n            \"name\": \"Votes\",\n            \"type\": \"Edm.ComplexType\",\n            \"fields\": [\n                {\n                    \"name\": \"UpVotes\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"DownVotes\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                }\n            ]\n        },\n        {\n            \"name\": \"Answers\",\n            \"type\": \"Collection(Edm.ComplexType)\",\n            \"fields\": [\n                {\n                    \"name\": \"IsAcceptedAnswer\",\n                    \"type\": \"Edm.String\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"Body\",\n                    \"type\": \"Edm.String\",\n                    \"searchable\": true,\n                    \"filterable\": false,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": false,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": \"en.microsoft\",\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"Score\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"CreationDate\",\n                    \"type\": \"Edm.DateTimeOffset\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                },\n                {\n                    \"name\": \"OwnerUserId\",\n                    \"type\": \"Edm.Int64\",\n                    \"searchable\": false,\n                    \"filterable\": true,\n                    \"retrievable\": true,\n                    \"sortable\": false,\n                    \"facetable\": true,\n                    \"key\": false,\n                    \"indexAnalyzer\": null,\n                    \"searchAnalyzer\": null,\n                    \"analyzer\": null,\n                    \"synonymMaps\": []\n                }\n            ]\n        },\n        {\n            \"name\": \"rid\",\n            \"type\": \"Edm.String\",\n            \"searchable\": false,\n            \"filterable\": false,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": false,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": null,\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"organizations\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"locations\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"keyphrases\",\n            \"type\": \"Collection(Edm.String)\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": false,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        },\n        {\n            \"name\": \"language\",\n            \"type\": \"Edm.String\",\n            \"searchable\": true,\n            \"filterable\": true,\n            \"retrievable\": true,\n            \"sortable\": true,\n            \"facetable\": true,\n            \"key\": false,\n            \"indexAnalyzer\": null,\n            \"searchAnalyzer\": null,\n            \"analyzer\": \"en.microsoft\",\n            \"synonymMaps\": []\n        }\n    ],\n    \"scoringProfiles\": [\n        {\n            \"name\": \"boostPopularAndNew\",\n            \"functionAggregation\": \"sum\",\n            \"text\": null,\n            \"functions\": [\n                {\n                    \"fieldName\": \"ViewCount\",\n                    \"interpolation\": \"linear\",\n                    \"type\": \"magnitude\",\n                    \"boost\": 5,\n                    \"freshness\": null,\n                    \"magnitude\": {\n                        \"boostingRangeStart\": 0,\n                        \"boostingRangeEnd\": 500,\n                        \"constantBoostBeyondRange\": true\n                    },\n                    \"distance\": null,\n                    \"tag\": null\n                },\n                {\n                    \"fieldName\": \"LastActivityDate\",\n                    \"interpolation\": \"constant\",\n                    \"type\": \"freshness\",\n                    \"boost\": 5,\n                    \"freshness\": {\n                        \"boostingDuration\": \"P120D\"\n                    },\n                    \"magnitude\": null,\n                    \"distance\": null,\n                    \"tag\": null\n                }\n            ]\n        }\n    ],\n    \"corsOptions\": {\n        \"allowedOrigins\": [\n            \"*\"\n        ],\n        \"maxAgeInSeconds\": 300\n    },\n    \"suggesters\": [\n        {\n            \"name\": \"sg\",\n            \"searchMode\": \"analyzingInfixMatching\",\n            \"sourceFields\": [\n                \"rid\",\n                \"organizations\",\n                \"locations\",\n                \"keyphrases\",\n                \"language\"\n            ]\n        }\n    ],\n    \"analyzers\": [],\n    \"tokenizers\": [],\n    \"tokenFilters\": [],\n    \"charFilters\": []\n}"
+				},
+				"url": {
+					"raw": "https://{{SearchService}}.search.windows.net/indexes/{{IndexName}}?api-version=2019-05-06",
+					"protocol": "https",
+					"host": [
+						"{{SearchService}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2019-05-06"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Synonym Map",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"value": "{{AdminAPIKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"name\":\"travel-stackexchange-synonyms\", \n    \"format\":\"solr\", \n    \"synonyms\": \n\t  \"toronto airport, yyz, pearson airport\" \n} \n"
+				},
+				"url": {
+					"raw": "https://{{SearchService}}.search.windows.net/synonymmaps/travel-stackexchange-synonyms?api-version=2019-05-06",
+					"protocol": "https",
+					"host": [
+						"{{SearchService}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"synonymmaps",
+						"travel-stackexchange-synonyms"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2019-05-06"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Index Schema",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"value": "{{APIKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"name\":\"travel-stackexchange-synonyms\", \n    \"format\":\"solr\", \n    \"synonyms\": \n\t  \"toronto airport, yyz, pearson airport\" \n} \n"
+				},
+				"url": {
+					"raw": "https://{{SearchService}}.search.windows.net/indexes/{{IndexName}}?api-version=2019-05-06",
+					"protocol": "https",
+					"host": [
+						"{{SearchService}}",
+						"search",
+						"windows",
+						"net"
+					],
+					"path": [
+						"indexes",
+						"{{IndexName}}"
+					],
+					"query": [
+						{
+							"key": "api-version",
+							"value": "2019-05-06"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
